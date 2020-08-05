@@ -12,6 +12,7 @@ prerequisites() {
     wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     mkdir -p hugobin
     tar -xzvf hugo.tar.gz -C ./hugobin
+    ls -l ./hugobin
     mv ./hugobin/hugo $HOME/gopath/bin
     rm hugo.tar.gz && rm -rf ./hugobin
     whereis hugo
