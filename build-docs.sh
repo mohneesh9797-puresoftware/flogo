@@ -14,7 +14,10 @@ prerequisites() {
     tar -xzvf hugo.tar.gz -C ./hugobin
     ls -l ./hugobin
     ls -l $HOME/gopath/
-    mv ./hugobin/hugo $HOME/gopath/bin/
+    if [ `uname -m` = 'aarch64' ]; then
+        mkdir $HOME/gopath/bin
+    fi 
+    mv ./hugobin/hugo $HOME/gopath/bin
     rm hugo.tar.gz && rm -rf ./hugobin
     whereis hugo
 }
