@@ -17,11 +17,8 @@ prerequisites() {
     fi
     mkdir -p hugobin
     tar -xzvf hugo.tar.gz -C ./hugobin
-    ls -l ./hugobin
-    ls -l $HOME/gopath/
     mv ./hugobin/hugo $HOME/gopath/bin
     rm hugo.tar.gz && rm -rf ./hugobin
-    whereis hugo
 }
 
 #--- Get external docs ---
