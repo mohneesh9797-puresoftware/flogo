@@ -14,6 +14,7 @@ prerequisites() {
     tar -xzvf hugo.tar.gz -C ./hugobin
     mv ./hugobin/hugo $HOME/gopath/bin
     rm hugo.tar.gz && rm -rf ./hugobin
+    whereis hugo
 }
 
 #--- Get external docs ---
