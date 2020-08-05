@@ -13,7 +13,7 @@ prerequisites() {
     mkdir -p hugobin
     tar -xzvf hugo.tar.gz -C ./hugobin
     ls -l ./hugobin
-    mv ./hugobin/hugo $HOME/gopath/bin
+    cp ./hugobin/hugo $HOME/gopath/bin/
     rm hugo.tar.gz && rm -rf ./hugobin
     whereis hugo
 }
