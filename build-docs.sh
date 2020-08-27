@@ -6,15 +6,12 @@
 
 #--- Variables ---
 HUGO_VERSION=0.74.3
-
+HUGO_ARCH = "64bit"
 #--- Download and install prerequisites ---
 prerequisites() {
     if [ `uname -m` = 'aarch64' ]; then
             HUGO_ARCH = "ARM64"
             mkdir $HOME/gopath/bin
-            echo $HUGO_ARCH
-    else
-            HUGO_ARCH = "64bit"
             echo $HUGO_ARCH
     fi
     wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-${HUGO_ARCH}.tar.gz
